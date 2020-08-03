@@ -19,6 +19,14 @@ public class TreeUtils {
      * 子节点集合
      */
     static String children = "children";
+
+    /**
+     * 将List转ListTree
+     * @param trees
+     * @param <T>
+     * @return
+     * @throws IllegalAccessException
+     */
     public  static   <T>  List<T>   ListToTree(List<T> trees) throws IllegalAccessException {
          //根节点集合
         List<T> rootList = new ArrayList<T>();
@@ -63,6 +71,14 @@ public class TreeUtils {
         }
         return null;
     }
+
+    /**
+     * 递归构建
+     * @param currentTrees
+     * @param trees
+     * @param <T>
+     * @throws IllegalAccessException
+     */
     private static  <T> void  buildChilTree(List<T> currentTrees,    HashMap<Object, List<T>>  trees) throws IllegalAccessException {
         for (T t : currentTrees) {
             Object currentId = getValue(t, id);

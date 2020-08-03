@@ -8,12 +8,12 @@ private String id;
 private String pid;
 private String name;
 @TreeElement(name = "children")
-private List<TreeEntityDemo> treeEntityDemos = new ArrayList<>();
-    public List<TreeEntityDemo> getTreeEntityDemos() {
+private List<Object> treeEntityDemos = new ArrayList<>();
+    public List<Object> getTreeEntityDemos() {
         return treeEntityDemos;
     }
 
-    public void setTreeEntityDemos(List<TreeEntityDemo> treeEntityDemos) {
+    public void setTreeEntityDemos(List<Object> treeEntityDemos) {
         this.treeEntityDemos = treeEntityDemos;
     }
 
