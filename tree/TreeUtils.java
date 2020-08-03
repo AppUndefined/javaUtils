@@ -2,6 +2,12 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+/**
+ * @program: javaUtils
+ * @description: 树结构工具-TreeUtil
+ * @author: AppUndefined(LS)
+ * @create: 2020-08-03 15:41
+ **/
 public class TreeUtils {
     /**
      * 根节点数值
