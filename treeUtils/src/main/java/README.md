@@ -1,6 +1,6 @@
 #使用步骤：
 ##1. 添加依赖
-        <dependency></br>
+        <dependency>
           <groupId>com.github.appundefined</groupId>
          <artifactId>treeUtils</artifactId>
          <version>1.0-RELEASE</version>

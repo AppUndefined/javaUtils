@@ -1,3 +1,5 @@
+package com.github.appundefined;
+
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,3 +1,5 @@
+package com.github.appundefined;
+
 import java.lang.annotation.*;
 
 @Target(value= {ElementType.FIELD})
