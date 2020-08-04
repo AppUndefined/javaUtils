@@ -1,5 +1,10 @@
 #使用步骤：
-##1. 添加TreeUtils、TreeElement两个文件
+##1. 添加依赖
+        <dependency></br>
+          <groupId>com.github.appundefined</groupId>
+         <artifactId>treeUtils</artifactId>
+         <version>1.0-RELEASE</version>
+        </dependency>
 ##2. 在需要转换为树结构的对象字段上添加核心注解3个<br>
 @TreeElement(name = "id")          
 private String id;                 

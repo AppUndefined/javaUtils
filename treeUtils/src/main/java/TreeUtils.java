@@ -3,42 +3,36 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * @program: javaUtils
- * @description: 树结构工具-TreeUtil
- * @author: AppUndefined(LS)
- * @create: 2020-08-03 15:41
- **/
 public class TreeUtils {
     /**
-     * 根节点数值
+     * Root node value
      */
     static String rootNode = "0";
     /**
-     * 主键id
+     * Primary key id
      */
     static String id = "id";
     /**
-     * 父节点id
+     * Parent node id
      */
     static String pid = "pid";
     /**
-     * 子节点集合
+     * Child node collection
      */
     static String children = "children";
 
     /**
-     * 将List转ListTree
-     * @param trees
-     * @param <T>
-     * @return
-     * @throws IllegalAccessException
+     * Convert List to List Tree
+     * @param trees t
+     * @param <T> t
+     * @return result
+     * @throws IllegalAccessException result
      */
     public  static   <T>  List<T>   ListToTree(List<T> trees) throws IllegalAccessException {
-         //根节点集合
+         //Root node collection
         List<T> rootList = new ArrayList<T>();
         HashMap<Object, List<T>> pidAndTrees= new HashMap<>();
-        for (T t : trees) {
+        for (final T t : trees) {
             Object value = getValue(t, pid);
             if(value!=null){
                 if(pidAndTrees.get(value)!=null) {
@@ -56,7 +50,7 @@ public class TreeUtils {
     }
 
     /**
-     * 获取对象指定注解值对应的字段值
+     * Get the field value corresponding to the specified annotation value of the object
      * @param t
      * @param key
      * @param <T>
@@ -80,7 +74,7 @@ public class TreeUtils {
     }
 
     /**
-     * 递归构建
+     * Recursive construction
      * @param currentTrees
      * @param trees
      * @param <T>
@@ -89,7 +83,7 @@ public class TreeUtils {
     private static  <T> void  buildChilTree(List<T> currentTrees,    HashMap<Object, List<T>>  trees) throws IllegalAccessException {
         for (T t : currentTrees) {
             Object currentId = getValue(t, id);
-            //以当前id为pid的数据存在
+            //Data exists with current id as pid
             if(trees.get(currentId)!=null){
                 List list = (List) getValue(t, children);
                 list.addAll(trees.get(currentId));
