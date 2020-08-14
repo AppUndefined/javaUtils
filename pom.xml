@@ -15,5 +15,7 @@
     <description>Parent</description>
     <modules>
         <module>treeUtils</module>
+        <module>excelUtil</module>
+        <module>annotationUtils</module>
     </modules>
   </project>

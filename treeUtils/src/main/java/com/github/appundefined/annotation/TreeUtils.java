@@ -1,4 +1,4 @@
-package com.github.appundefined.tree;
+package com.github.appundefined.annotation;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
