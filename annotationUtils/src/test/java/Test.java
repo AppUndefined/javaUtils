@@ -2,11 +2,12 @@ import com.github.appundefined.annotation.AnnotationUtils;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Test {
     public static void main(String[] args) throws Exception {
-//        testLRU();
-        testAnnotation();
+        testLRU();
+//        testAnnotation();
     }
 
     private static void testAnnotation() throws Exception {
@@ -26,7 +27,7 @@ public class Test {
 
         TestUser2 testUser2 = new TestUser2();
         testUser2.setUsername("aaa");
-        Object username2 = AnnotationUtils.getValue(testUser2, "username");
+        Map map = AnnotationUtils.getMap(testUser2);
 
 
         TestUser3 testUser3 = new TestUser3();

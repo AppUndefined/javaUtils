@@ -42,6 +42,26 @@ public class AnnotationUtils implements LruInterface {
         }
         return null;
     }
+
+    /**
+     * 反射获取对象属性与属性值对应的map
+     * @param t
+     * @param <T>
+     * @return
+     * @throws IllegalAccessException
+     */
+    public static   <T> Map getMap(T t) throws IllegalAccessException {
+        HashMap<String, Object> result = new HashMap<>();
+        if(t==null){
+            return null;
+        }
+        Field[] fields = getFields(t);
+        for (Field field : fields) {
+            result.put(field.getName(),field.get(t));
+            return result;
+        }
+        return null;
+    }
     /**
      * 反射获取类指定属性上的指定注解值
      * @param cla 指定一个类
@@ -95,25 +115,7 @@ public class AnnotationUtils implements LruInterface {
             }
         return result;
     }
-    /**
-     * 反射获取对象属性与属性值对应的map
-     * @param t
-     * @param <T>
-     * @return
-     * @throws IllegalAccessException
-     */
-    public static   <T> Map getMap(T t) throws IllegalAccessException {
-        HashMap<String, Object> result = new HashMap<>();
-        if(t==null){
-            return null;
-        }
-        Field[] fields = getFields(t);
-        for (Field field : fields) {
-            result.put(field.getName(),field.get(t));
-            return result;
-        }
-        return null;
-    }
+
 
     /**
      * 如果缓存中存在改对象的Field则直接返回
