@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.appundefined</groupId>
     <artifactId>annotationUtils</artifactId>
-    <version>1.0-RELEASE</version>
-    <description>java注解工具集合(采用LRU缓存算法)</description>
+    <version>2.6-RELEASE</version>
+    <description>java工具类集合</description>
     <name>${project.artifactId}</name>
     <url>https://github.com/AppUndefined/javaUtils</url>
     <licenses>
@@ -102,11 +102,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.1.0</version>
-                <configuration>
-                    <charset>UTF-8</charset>
-                    <encoding>UTF-8</encoding>
-                    <docencoding>UTF-8</docencoding>
-                </configuration>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
