@@ -16,6 +16,7 @@
     <modules>
         <module>treeUtils</module>
         <module>annotationUtils</module>
+        <module>activitiUtils</module>
     </modules>
 
   </project>

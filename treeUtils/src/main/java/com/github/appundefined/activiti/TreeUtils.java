@@ -1,4 +1,4 @@
-package com.github.appundefined.annotation;
+package com.github.appundefined.activiti;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

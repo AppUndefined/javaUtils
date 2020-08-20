@@ -1,4 +1,4 @@
-import com.github.appundefined.annotation.AnnotationUtils;
+import com.github.appundefined.activiti.AnnotationUtils;
 
 import java.util.Date;
 import java.util.HashMap;

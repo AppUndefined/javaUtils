@@ -1,4 +1,4 @@
-package com.github.appundefined.annotation;
+package com.github.appundefined.activiti;
 
 import java.util.ArrayList;
 import java.util.List;
