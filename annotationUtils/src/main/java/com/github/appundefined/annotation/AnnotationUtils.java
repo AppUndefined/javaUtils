@@ -1,4 +1,4 @@
-package com.github.appundefined.activiti;
+package com.github.appundefined.annotation;
 
 
 import java.lang.annotation.Annotation;

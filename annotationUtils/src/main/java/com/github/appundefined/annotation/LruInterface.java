@@ -1,4 +1,4 @@
-package com.github.appundefined.activiti;
+package com.github.appundefined.annotation;
 
 public interface LruInterface {
     void remove(Object object);

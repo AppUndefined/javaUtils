@@ -12,11 +12,11 @@ import java.util.List;
 import java.util.Map;
 
 public class ActivitiUtils {
-    private static ProcessEngine defaultProcessEngine = ProcessEngines.getDefaultProcessEngine();
-    private static HistoryService historyService = defaultProcessEngine.getHistoryService();
-    private static TaskService taskService = defaultProcessEngine.getTaskService();
-    private static RepositoryService repositoryService = defaultProcessEngine.getRepositoryService();
-    private static RuntimeService runtimeService = defaultProcessEngine.getRuntimeService();
+    public static ProcessEngine defaultProcessEngine = ProcessEngines.getDefaultProcessEngine();
+    public static HistoryService historyService = defaultProcessEngine.getHistoryService();
+    public static TaskService taskService = defaultProcessEngine.getTaskService();
+    public static RepositoryService repositoryService = defaultProcessEngine.getRepositoryService();
+    public static RuntimeService runtimeService = defaultProcessEngine.getRuntimeService();
 
     /**
      * 根据流程定义id返回流程name

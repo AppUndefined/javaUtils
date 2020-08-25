@@ -17,6 +17,7 @@
         <module>treeUtils</module>
         <module>annotationUtils</module>
         <module>activitiUtils</module>
+        <module>DataDictionary</module>
     </modules>
 
   </project>

@@ -1,4 +1,4 @@
-package com.github.appundefined.activiti;
+package com.github.appundefined.tree;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -10,6 +10,22 @@ public class TreeUtils {
      * Root node value
      */
     static String rootNode = "0";
+    /**
+     * Root node value
+     */
+    static String stringType = "class java.lang.String";
+    /**
+     * Root node value
+     */
+    static String longType = "class java.lang.Long";
+    /**
+     * Root node value
+     */
+    static String integerType = "class java.lang.Integer";
+    /**
+     * Root node value
+     */
+    static String intType = "int";
     /**
      * Primary key id
      */
@@ -42,9 +58,26 @@ public class TreeUtils {
                 }else{
                     pidAndTrees.put(value,new ArrayList<T>(){{this.add(t);}});
                 }
-                if(rootNode.equals(value)) {
-                    rootList.add(t);
+                Object type = getType(t, pid);
+                if (stringType.equals(type)) {
+                    if (rootNode.equals(value)) {
+                        rootList.add(t);
+                    }
+                } else if (longType.equals(type)) {
+                    if (((Long)Long.parseLong(rootNode)).equals(value)) {
+                        rootList.add(t);
+                    }
+                }else if (integerType.equals(type)) {
+                    if (((Integer)Integer.parseInt(rootNode)).equals(value)) {
+                        rootList.add(t);
+                    }
                 }
+                else if (intType.equals(type)) {
+                    if (((Integer)Integer.parseInt(rootNode)).equals(value)) {
+                        rootList.add(t);
+                    }
+                }
+
             }
         }
         buildChilTree(rootList,pidAndTrees);
@@ -70,6 +103,24 @@ public class TreeUtils {
                     Object o = field.get(t);
                     return o;
                 }
+            }
+        }
+        return null;
+    }
+    /**
+     * Get the field value corresponding to the specified annotation value of the object
+     * @param t
+     * @param key
+     * @param <T>
+     * @return
+     * @throws IllegalAccessException
+     */
+    public static   <T>  Object getType(T t,String key) throws IllegalAccessException {
+        Field[] fields = t.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            field.setAccessible(true);
+            if (key.equals(field.getName())) {
+                return field.getType().toString();
             }
         }
         return null;
