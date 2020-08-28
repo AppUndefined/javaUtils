@@ -50,7 +50,7 @@ public class AnnotationUtils implements LruInterface {
      * @return
      * @throws IllegalAccessException
      */
-    public static   <T> Map getMap(T t) throws IllegalAccessException {
+    public static   <T> Map<String, Object> getMap(T t) throws IllegalAccessException {
         HashMap<String, Object> result = new HashMap<>();
         if(t==null){
             return null;

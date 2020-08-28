@@ -18,6 +18,7 @@
         <module>annotationUtils</module>
         <module>activitiUtils</module>
         <module>DataDictionary</module>
+        <module>commons</module>
     </modules>
 
   </project>
