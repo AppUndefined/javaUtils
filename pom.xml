@@ -19,6 +19,7 @@
         <module>activitiUtils</module>
         <module>DataDictionary</module>
         <module>commons</module>
+        <module>scheduleTaskUtils</module>
     </modules>
 
   </project>

@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <modelVersion>4.0.0</modelVersion>
 <groupId>com.github.appundefined</groupId>
-<artifactId>activitiUtils</artifactId>
-<version>1.2-RELEASE</version>
-<description>java工具类集合</description>
+<artifactId>scheduleTaskUtils</artifactId>
+    <version>1.0-RELEASE</version>
+<description>java工具类集合(定时任务工具)</description>
 <name>${project.artifactId}</name>
 <url>https://github.com/AppUndefined/javaUtils</url>
 <licenses>
@@ -27,13 +27,13 @@
         <organization>unrestrained</organization>
     </developer>
 </developers>
-    <dependencies>
-        <dependency>
-            <groupId>org.activiti</groupId>
-            <artifactId>activiti-spring-boot-starter</artifactId>
-            <version>7.1.0.M5</version>
-        </dependency>
-    </dependencies>
+<dependencies>
+    <dependency>
+        <groupId>org.activiti</groupId>
+        <artifactId>activiti-spring-boot-starter</artifactId>
+        <version>7.1.0.M5</version>
+    </dependency>
+</dependencies>
 <build>
     <pluginManagement>
         <plugins>

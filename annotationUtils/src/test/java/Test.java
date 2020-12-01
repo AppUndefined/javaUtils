@@ -9,7 +9,7 @@ public class Test {
         testLRU();
 //        testAnnotation();
     }
-
+    
     private static void testAnnotation() throws Exception {
         Object annotationValue = AnnotationUtils.getAnnotationValue(TreeEntityDemo.class, TreeElement.class, "pid", "name");
         HashMap  result = AnnotationUtils.getAnnotationValue(TreeEntityDemo.class, TreeElement.class);

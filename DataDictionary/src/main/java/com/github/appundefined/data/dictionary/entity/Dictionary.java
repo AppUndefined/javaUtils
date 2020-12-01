@@ -24,6 +24,9 @@ public class Dictionary implements Serializable {
     @Column(name = "d_type" , columnDefinition = "varchar(100)")
     @ApiModelProperty(value = "类型")
     private String type;//类型
+    @Column(name = "d_data" , columnDefinition = "varchar(400)")
+    @ApiModelProperty(value = "数据")
+    private String data;//数据
     @Column(name = "d_pid")
     @TreeElement(name = "pid")
     @ApiModelProperty(value = "父id")

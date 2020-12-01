@@ -7,40 +7,40 @@ import java.util.List;
 
 public class TreeUtils {
     /**
-     * Root node value
+     * 根节点值/Root node value
      */
     static String rootNode = "0";
     /**
-     * Root node value
+     * String class路径
      */
     static String stringType = "class java.lang.String";
     /**
-     * Root node value
+     * Long class路径
      */
     static String longType = "class java.lang.Long";
     /**
-     * Root node value
+     * Integer class路径
      */
     static String integerType = "class java.lang.Integer";
     /**
-     * Root node value
+     * int
      */
     static String intType = "int";
     /**
-     * Primary key id
+     * 主键编号/Primary key id
      */
     static String id = "id";
     /**
-     * Parent node id
+     * 父节点ID/Parent node id
      */
     static String pid = "pid";
     /**
-     * Child node collection
+     * 子节点集合/Child node collection
      */
     static String children = "children";
 
     /**
-     * Convert List to List Tree
+     * 将列表转换为列表树/Convert List to List Tree
      * @param trees t
      * @param <T> t
      * @return result
@@ -85,6 +85,7 @@ public class TreeUtils {
     }
 
     /**
+     * 获取与对象的指定注释值对应的字段值
      * Get the field value corresponding to the specified annotation value of the object
      * @param t
      * @param key
@@ -108,7 +109,8 @@ public class TreeUtils {
         return null;
     }
     /**
-     * Get the field value corresponding to the specified annotation value of the object
+     * 获取对象的指定字段对应的字段类型
+     * Get the field type corresponding to the specified field of the object
      * @param t
      * @param key
      * @param <T>
@@ -127,7 +129,7 @@ public class TreeUtils {
     }
 
     /**
-     * Recursive construction
+     * 递归构造/Recursive construction
      * @param currentTrees
      * @param trees
      * @param <T>

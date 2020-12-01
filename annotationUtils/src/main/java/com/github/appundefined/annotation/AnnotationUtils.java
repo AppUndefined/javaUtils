@@ -58,9 +58,8 @@ public class AnnotationUtils implements LruInterface {
         Field[] fields = getFields(t);
         for (Field field : fields) {
             result.put(field.getName(),field.get(t));
-            return result;
         }
-        return null;
+        return result;
     }
     /**
      * 反射获取类指定属性上的指定注解值
