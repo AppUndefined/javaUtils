@@ -109,6 +109,13 @@
             <artifactId>swagger-models</artifactId>
             <version>1.5.21</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.jeval/jeval -->
+        <dependency>
+            <groupId>net.sourceforge.jeval</groupId>
+            <artifactId>jeval</artifactId>
+            <version>0.9.4</version>
+        </dependency>
+
     </dependencies>
     <build>
         <pluginManagement>
