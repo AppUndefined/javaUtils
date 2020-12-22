@@ -109,6 +109,29 @@ public class TreeUtils {
         return null;
     }
     /**
+     * 设置与对象的指定注释值对应的字段值
+     * Get the field value corresponding to the specified annotation value of the object
+     * @param t
+     * @param key
+     * @param <T>
+     * @return
+     * @throws IllegalAccessException
+     */
+    private static   <T>  Object setValue(T t,String key) throws IllegalAccessException {
+        Field[] fields = t.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            field.setAccessible(true);
+            TreeElement treeElement = field.getAnnotation(TreeElement.class);
+            if(treeElement!=null){
+                String name = treeElement.name();
+                if(key.equals(name)){
+                    field.set(t,null);
+                }
+            }
+        }
+        return null;
+    }
+    /**
      * 获取对象的指定字段对应的字段类型
      * Get the field type corresponding to the specified field of the object
      * @param t
@@ -143,6 +166,8 @@ public class TreeUtils {
                 List list = (List) getValue(t, children);
                 list.addAll(trees.get(currentId));
                 buildChilTree(trees.get(currentId),trees);
+            }else {
+                setValue(t, children);
             }
         }
 
