@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.appundefined</groupId>
-    <artifactId>DataDictionaryUtils</artifactId>
+    <artifactId>com.github.appundefined.data.dictionary.springAnnotation.DataDictionaryUtils</artifactId>
     <version>1.6-RELEASE</version>
     <description>java工具类集合</description>
     <name>${project.artifactId}</name>
